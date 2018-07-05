@@ -192,15 +192,6 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`🎶 Start playing: **${song.title}**`);
 }
 
-let commandList = fs.readFileSync('./Help.txt', 'utf-8');
-    let embedMessages = message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS");
-    if(!embedMessages) return message.channel.send("I do not have permission EMBED_LINKS");
-    const embed = new RichEmbed()
-    .setColor(0x00AE86)
-    .setAuthor("")
-    .setDescription(commandList)
-    .setFooter("Command Executed")
-    message.channel.send({embed: embed});
 
 
 client.login(TOKEN);
